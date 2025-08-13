@@ -1,26 +1,21 @@
-version: '3.2'
 services:
   rng:
-    image: rng:3.0
-    build: rng
-    ports:
-    - "8001:8001"
+    image: brahimhamdi/rng
+    container_name: rng
 
   hasher:
-    image: hasher:3.0
-    build: hasher
-    ports:
-    - "8002:8002"
+    image: brahimhamdi/hasher
+    container_name: hasher
 
   webui:
-#    build: webui
-    image: brahimhamdi/webui:2.0
+    image: brahimhamdi/webui
+    container_name: webui
     ports:
     - "8000:80"
 
   worker:
-    image: worker:3.0
-    build: worker
+    image: brahimhamdi/worker
+    container_name: worker
 
   prometheus:
     image: prom/prometheus:latest
