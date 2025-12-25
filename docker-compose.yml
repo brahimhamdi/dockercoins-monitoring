@@ -15,7 +15,6 @@ services:
 
   worker:
     image: brahimhamdi/worker
-    container_name: worker
 
   prometheus:
     image: prom/prometheus:latest
